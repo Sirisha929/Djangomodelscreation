@@ -73,19 +73,10 @@ In the project root directory, create a file named Dockerfile:
 dockerfile
 FROM python:3.10
 
-# Set working directory in the container
-WORKDIR /app
-
-# Copy the application files
-COPY . .
-
-# Install dependencies
-RUN pip install -r requirements.txt
-
-# Expose port 8000 for the app
+Expose port 8000 for the app
 EXPOSE 8000
 
-# Run the Django application
+ Run the Django application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 2. Create a docker-compose.yml file (optional)
 If you need multi-container support, create docker-compose.yml:
